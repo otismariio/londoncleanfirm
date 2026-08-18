@@ -552,13 +552,13 @@
         left: 0;
         height: 3px;
         width: 0%;
-        background: var(--orange);
+        background: var(--lcfblue);
         z-index: 60;
         transition: width 0.08s linear;
       }
 
       /* ---- Hamburger: three dots -> arrow ---- */
-      .burger {
+      /* .burger {
         width: 44px;
         height: 44px;
         border-radius: 999px;
@@ -628,7 +628,56 @@
       .burger.open .burger-dots span:nth-child(4) {
         transform: translate(-7px, -7px) scale(1.8);
         border-radius: 2px;
-      }
+      } */
+
+
+      .menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  height: 44px;
+  padding: 0 14px;
+
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.menu-toggle:active {
+  transform: scale(0.95);
+}
+
+.menu-toggle .close-text {
+  display: none;
+}
+
+/* When menu is open */
+.menu-toggle.open {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.menu-toggle.open .menu-text {
+  display: none;
+}
+
+.menu-toggle.open .close-text {
+  display: block;
+}
 
       /* ---- Mobile menu: side drawer + overlay ---- */
       #menuOverlay {
